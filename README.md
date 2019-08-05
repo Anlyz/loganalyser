@@ -34,6 +34,10 @@ cd /path/to/loganalyser/
 mkvirtualenv loganalyser --python=$(which python3)
 setvirtualenvproject
 ```
+##### Requirements installation
+```bash
+pip install -r requirements.txt
+```
 
 #### Configuration
 - Config File: All settings are present in the config file. The config file can be edited to change default values. You can also pass command line arguments to change other parameters w.r.t analysis.
