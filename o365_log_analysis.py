@@ -17,6 +17,8 @@ import pandas as pd
 import geoip2.database
 from joblib import load
 import datetime
+import warnings
+warnings.simplefilter(action='ignore')
 
 try:
     from config import *
@@ -53,7 +55,7 @@ class O365LogAnalyzer:
     def verify_columns(self):
         print('* Columns check...')
         columns = self.data.columns.values
-        if set(columns) == LOG_STD_COLS:
+        if set(columns) == O365_LOG_STD_COLS:
             return True
         return False
 
@@ -108,7 +110,7 @@ class O365LogAnalyzer:
         df = df.rename(columns={'loginStatus': 'failed_login_count'})
         df = df.sort_values(by='user')
         df['mal_ip'] = df['ipAddress'].map(lambda x: self.check_blacklisted_ip(x))
-        df = df[['user', 'ipAddress', 'mal_ip', ' failed_login_count']]
+        df = df[['user', 'ipAddress', 'mal_ip', 'failed_login_count']]
         df.to_csv(os.path.join(OUTPUT_DIR, 'FailedLoginFromDifferentIP_' + self.timestamp + '.csv'), index=None)
 
     def max_login_failure_time_window(self, df):

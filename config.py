@@ -33,13 +33,15 @@ GEOLITE_DB = os.path.join(RESOURCES_DIR, 'GeoLite2-City/GeoLite2-City.mmdb')
 
 # Blacklisted IP TRIE Joblib and output file
 BLACKLISTED_IP_TRIE_JOBLIB = os.path.join(RESOURCES_DIR, 'blacklisted_ip_trie.joblib')
-BLACKLISTED_IP_FILE = os.path.join(RESOURCES_DIR, 'full_blacklist_database-2.txt')
+BLACKLISTED_IP_URL = 'https://myip.ms/files/blacklist/general/full_blacklist_database.zip'
 
 # The Log files should be in a CSV format and must have standard columns
 # The below of the standard column format that the log file must have
 # Should this change, change the LOG_STD_COLS down below here, but be sure
 # that the below fields/columns are a must to perform the analytics/profiling
-LOG_STD_COLS = {'_time', 'host', 'action', 'dest_ip', 'dest_port', 'src_ip'}
+FIREWALL_LOG_STD_COLS = {'_time', 'host', 'action', 'dest_ip', 'dest_port', 'src_ip'}
+O365_LOG_STD_COLS = {'_time', 'deviceInformation', 'ipAddress', 'user', 'location.country', \
+                     'location.city', 'app', 'loginStatus'}
 
 # Time window bucket:
 # 's' is for seconds and must always end with 's'

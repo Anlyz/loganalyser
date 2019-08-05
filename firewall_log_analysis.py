@@ -59,7 +59,7 @@ class FirewallLogAnalyzer:
     def verify_columns(self):
         print('* Columns check...')
         columns = self.data.columns.values
-        if set(columns) == LOG_STD_COLS:
+        if set(columns) == FIREWALL_LOG_STD_COLS:
             return True
         return False
 
