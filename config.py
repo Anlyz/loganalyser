@@ -40,8 +40,7 @@ BLACKLISTED_IP_URL = 'https://myip.ms/files/blacklist/general/full_blacklist_dat
 # Should this change, change the LOG_STD_COLS down below here, but be sure
 # that the below fields/columns are a must to perform the analytics/profiling
 FIREWALL_LOG_STD_COLS = {'_time', 'host', 'action', 'dest_ip', 'dest_port', 'src_ip'}
-O365_LOG_STD_COLS = {'_time', 'deviceInformation', 'ipAddress', 'user', 'location.country', \
-                     'location.city', 'app', 'loginStatus'}
+O365_LOG_STD_COLS = {'_time', 'deviceInformation', 'ipAddress', 'user', 'location.country', 'location.city', 'app', 'loginStatus'}
 
 # Time window bucket:
 # 's' is for seconds and must always end with 's'

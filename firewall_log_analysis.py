@@ -169,7 +169,7 @@ class FirewallLogAnalyzer:
                         sys.exit(1)
             else:
                 print('* Invalid columns found!')
-                print('* Column names must be : ', LOG_STD_COLS)
+                print('* Column names must be : ', FIREWALL_LOG_STD_COLS)
                 sys.exit(1)
 
 
