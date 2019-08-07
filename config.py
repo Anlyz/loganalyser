@@ -31,6 +31,11 @@ RESOURCES_DIR = os.path.join(DATA_DIR, 'resources')
 # GeoIP database location
 GEOLITE_DB = os.path.join(RESOURCES_DIR, 'GeoLite2-City/GeoLite2-City.mmdb')
 
+# URL FOR FETCHING UPDATED IP-ASN and ASN-ISP DATA AND IP-ISP database location
+IP_ASN_URL = 'http://thyme.apnic.net/current/data-raw-table'
+ASN_ISP_URL = 'http://thyme.apnic.net/current/data-used-autnums'
+IP_ISP_RTREE_JOBLIB = os.path.join(RESOURCES_DIR, 'ip_isp_rtree.joblib')
+
 # Blacklisted IP TRIE Joblib and output file
 BLACKLISTED_IP_TRIE_JOBLIB = os.path.join(RESOURCES_DIR, 'blacklisted_ip_trie.joblib')
 BLACKLISTED_IP_URL = 'https://myip.ms/files/blacklist/general/full_blacklist_database.zip'
@@ -46,6 +51,9 @@ O365_LOG_STD_COLS = {'_time', 'deviceInformation', 'ipAddress', 'user', 'locatio
 # 's' is for seconds and must always end with 's'
 # eg: 60s, 120s, 3600s, etc...
 WINDOW_SLICE = '60s'
+
+# CONFIGURING ISP NAME OF THE ENTERPRISE
+ISP_NAME = 'NETAPP-AS-1 - NetApp, Inc., US'
 
 if __name__ == '__main__':
     print('*** Cannot execute config file! ***')

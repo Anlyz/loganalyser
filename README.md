@@ -26,7 +26,7 @@ _time, host, action, dest_ip, dest_port, src_ip
 - O365 Logs Columns
 ```bash
 _time, deviceInformation, ipAddress, user, location.country, location.city, app, loginStatus
-``` 
+```
 
 #### Installation
 ```bash
@@ -56,7 +56,13 @@ pip install -r requirements.txt
 To update the Blacklisted IP Trie manually:
 ```bash
 ./get_blacklist_ip_trie.py
-``` 
+```
+
+#### Manual update for IP to ISP Radix Tree :
+To update the IP to ISP Radix Tree manually:
+```bash
+./build_updated_ip_to_isp_db.py
+```
 
 ### Output Files
 Location : Output Directory (logs_stats/data_directory/output/)

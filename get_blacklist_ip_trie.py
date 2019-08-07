@@ -43,7 +43,10 @@ def download_zipfile():
 
 def create_blacklist_ip_trie():
     print('* Creating Blacklist IP Trie.')
-    print('* Last update: {}'.format(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(os.path.getmtime(BLACKLISTED_IP_TRIE_JOBLIB)))))
+    try:
+        print('* Last update: {}'.format(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(os.path.getmtime(BLACKLISTED_IP_TRIE_JOBLIB)))))
+    except:
+        pass
     blip = None
     blacklisted_ip_trie = trie.CharTrie()
     z = download_zipfile()
