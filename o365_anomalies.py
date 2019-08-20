@@ -38,7 +38,7 @@ except:
 class O365AnomalyDetector:
     def __init__(self):
         try:
-            # self.rtree = load(IP_ISP_RTREE_JOBLIB)
+            self.rtree = load(IP_ISP_RTREE_JOBLIB)
             self.timestamp = datetime.datetime.now().strftime('%Y%m%d%H%M%S%f')
         except Exception as e:
             print('* ERROR IN READING TP TO ISP RADIX TREE : ', e)
@@ -156,7 +156,6 @@ class O365AnomalyDetector:
                         zero_chk += 1
                     else:
                         self.user_login_pattern_data.loc[count, 'h'+str(hour)] = 0
-            # Do the code for removal of 0 entry : check if sum != 0 then count++ else count
             if(zero_chk > 0):
                 count += 1
         return count
