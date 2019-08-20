@@ -66,13 +66,15 @@ To update the IP to ISP Radix Tree manually:
 ```
 
 ### Output Files
-Location : Output Directory (logs_stats/data_directory/output/)
+Location : Output Directory (loganalyser/data/output/)
 - SuccessFailureLoginCount_....csv => For every user total count of successful logins and failed logins.
 - MaxLoginFailureByEachUserInWindowedTimeFrame_....csv => Maximum Count of login failures for each user in specified time window.
 - FailedLoginFromDifferentOS_....csv => Maximum Count of login failures for every user from different Operating Systems in specified time window.
 - FailedLoginFromDifferentIP_....csv => Maximum Count of login failures for every user from different IPs in specified time window. Also included detail of maliciousness of IP.
 - BlockedTrafficForEachDestinationIP_....csv => Maximum count of blocked traffic for every destination IP on different destination Ports in specified time window. Also included detail of maliciousness of IP and geo IP locations for most of the destination IPs.
 - BlockedTrafficForEachSourceIP_....csv => Maximum count of blocked traffic from different source IPs to different destination IPs on different destination Ports in specified time window. Also included detail of maliciousness of IP and geo IP locations for most of the IPs.
+
+Location : ML Output Directory (loganalyser/data/ml/)
 - UsersIPAddressAnomaly_....csv => IP Address anomaly for each user on a daily basis.
 - UsersIPSwitchRate_....csv => Rate of IP switch per user per day (between 0 to 1 with 0 meaning no switch and 1 meaning all IPs used in a day are different)
-- UsersLoginAnomaly_....csv => Users login patterning hour wise per day and finding deviations in the pattern and saving the username along with the date when deviation was found in this csv file. 
+- UsersLoginAnomaly_....csv => Users login patterning hour wise per day and finding deviations in the pattern and saving the username along with the date when deviation was found in this csv file.
