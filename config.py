@@ -53,7 +53,7 @@ O365_LOG_STD_COLS = {'_time', 'deviceInformation', 'ipAddress', 'user', 'locatio
 WINDOW_SLICE = '60s'
 
 # CONFIGURING ISP NAME OF THE ENTERPRISE
-ISP_NAME = 'NETAPP-AS-1 - NetApp, Inc., US'
+ISP_NAME = 'NETAPP'
 
 if __name__ == '__main__':
     print('*** Cannot execute config file! ***')
